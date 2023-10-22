@@ -1,12 +1,22 @@
+body{
+    background-color: white;
+    color: black;
+    text-align: center;
+}
 .container{
     display: flex;
     flex-direction: column;
     width: 500px;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+    color: black;  
+    margin-left: auto;
+    margin-right: auto;
 }
+
 table td{
-    border: 1px solid grey;
+    border: 5px solid black;
     width: 100px;
     height: 100px;
 }
