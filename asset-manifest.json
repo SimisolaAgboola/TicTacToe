@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/tictactoegamebysimi/static/css/main.1f4d7a49.css",
-    "main.js": "/tictactoegamebysimi/static/js/main.d3b7e0df.js",
-    "static/js/787.6b0bed1b.chunk.js": "/tictactoegamebysimi/static/js/787.6b0bed1b.chunk.js",
-    "index.html": "/tictactoegamebysimi/index.html",
-    "main.1f4d7a49.css.map": "/tictactoegamebysimi/static/css/main.1f4d7a49.css.map",
-    "main.d3b7e0df.js.map": "/tictactoegamebysimi/static/js/main.d3b7e0df.js.map",
-    "787.6b0bed1b.chunk.js.map": "/tictactoegamebysimi/static/js/787.6b0bed1b.chunk.js.map"
+    "main.css": "/TicTacToe/static/css/main.1f4d7a49.css",
+    "main.js": "/TicTacToe/static/js/main.b4e46ba2.js",
+    "static/js/787.6b0bed1b.chunk.js": "/TicTacToe/static/js/787.6b0bed1b.chunk.js",
+    "index.html": "/TicTacToe/index.html",
+    "main.1f4d7a49.css.map": "/TicTacToe/static/css/main.1f4d7a49.css.map",
+    "main.b4e46ba2.js.map": "/TicTacToe/static/js/main.b4e46ba2.js.map",
+    "787.6b0bed1b.chunk.js.map": "/TicTacToe/static/js/787.6b0bed1b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1f4d7a49.css",
-    "static/js/main.d3b7e0df.js"
+    "static/js/main.b4e46ba2.js"
   ]
 }
