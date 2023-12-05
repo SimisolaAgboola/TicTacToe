@@ -22,6 +22,13 @@ const TicTacToe = () => {
                 [2, 4, 6],
             ],
         };
+        // Check for a draw
+        if (squares.every(cell => cell !== '') && !winner) {
+            setWinner('None');
+            
+            return;
+        }
+
         for (let combo in combos){
             combos[combo].forEach((pattern) => {
                 if(
@@ -31,6 +38,7 @@ const TicTacToe = () => {
                 ){
                     //do nothing
                 } else if(
+                    squares[pattern[0]] !== '' &&
                     squares[pattern[0]] === squares[pattern[1]] &&
                     squares[pattern[1]] === squares[pattern[2]]
                 ){
