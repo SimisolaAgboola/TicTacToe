@@ -25,7 +25,6 @@ const TicTacToe = () => {
         // Check for a draw
         if (squares.every(cell => cell !== '') && !winner) {
             setWinner('None');
-            
             return;
         }
 
@@ -74,6 +73,7 @@ const TicTacToe = () => {
      
     return (
         <div className='container'>
+            <h1>Tic Tac Toe &#128540;</h1>
             <table>
                 Turn: {turn}
                 <tbody>
@@ -97,7 +97,7 @@ const TicTacToe = () => {
             {winner && (
                 <>
                 <p>{winner} is the winner!</p>
-                <button onClick={() => handleRestart()}>Play again</button>
+                <button className='button-50' onClick={() => handleRestart()}>Play again</button>
                 </>
             )}
         </div>

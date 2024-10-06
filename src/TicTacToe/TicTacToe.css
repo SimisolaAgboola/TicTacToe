@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Permanent+Marker&display=swap');
 body{
-    background-color: white;
+    border: 0;
+    margin: 0;
+    background-color: #e73c7e;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
     color: black;
     text-align: center;
+    font-family: "Permanent Marker", cursive;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 1.5rem;
 }
+
 .container{
     display: flex;
     flex-direction: column;
@@ -10,13 +20,69 @@ body{
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: black;  
+    color: orange;  
     margin-left: auto;
     margin-right: auto;
+    height: 100vh;
 }
 
 table td{
-    border: 5px solid black;
+    border: 10px solid orange;
     width: 100px;
     height: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    font-size: 2.5rem;
+}
+
+.button-50 {
+  appearance: button;
+  background-color: #000;
+  background-image: none;
+  border: 1px solid #000;
+  border-radius: 4px;
+  box-shadow: #fff 4px 4px 0 0,#000 4px 4px 0 1px;
+  box-sizing: border-box;
+  color: orangered;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Permanent Marker", cursive;;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0 5px 10px 0;
+  overflow: visible;
+  padding: 12px 40px;
+  text-align: center;
+  text-transform: none;
+  touch-action: manipulation;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-50:focus {
+  text-decoration: none;
+}
+
+.button-50:hover {
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.button-50:active {
+  box-shadow: rgba(0, 0, 0, .125) 0 3px 5px inset;
+  outline: 0;
+}
+
+.button-50:not([disabled]):active {
+  box-shadow: #fff 2px 2px 0 0, #000 2px 2px 0 1px;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-50 {
+    padding: 12px 50px;
+  }
 }
