@@ -12,7 +12,7 @@ npm (comes with node.js)
 
 **Installation**
 1. Clone the repository:
-  git clone https://github.com/your-username/tictactoe-multiplayer.git
+  git clone https://github.com/SimisolaAgboola/tictactoe-multiplayer.git
 cd tictactoe-multiplayer
 2. Install server dependencies: 
   cd server
