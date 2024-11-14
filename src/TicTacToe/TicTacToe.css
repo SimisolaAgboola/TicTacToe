@@ -13,26 +13,30 @@ body{
     font-size: 1.5rem;
 }
 
-.container{
+.game{
+    color: orange;  
     display: flex;
     flex-direction: column;
-    width: 500px;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    color: orange;  
-    margin-left: auto;
-    margin-right: auto;
-    height: 100vh;
+    margin-top: 50px;
 }
 
-table td{
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 5px;
+}
+
+.square{
     border: 10px solid orange;
     width: 100px;
     height: 100px;
     background-color: yellow;
     border-radius: 50%;
     font-size: 2.5rem;
+    cursor: pointer;
+    font-weight: 900;
 }
 
 .button-50 {
