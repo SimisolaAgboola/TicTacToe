@@ -6,10 +6,12 @@ Node.js backend with Socket.io for synchronizing game states
 
 **Getting Started**
 
-**Prerequisites**
-Before running this application, make sure you have the following installed:
-Node.js (v14 or higher)
-npm (comes with node.js)
+**Prerequisites**  
+
+Before running this application, make sure you have the following installed:  
+
+-Node.js (v14 or higher)
+-npm (comes with node.js)
 
 **Installation**
 1. Clone the repository:
@@ -33,15 +35,18 @@ cd tictactoe-multiplayer
   npm start
 The React app will open in your default browser on http://localhost:3000
 
-**How It Works**.
+**How It Works**  
+
 When more than 1 player joins the game, the game state (whose turn it is and the current board) is broadcast and synchronized across all clients in that game session.
 Players take turns by clicking on cells, and their moves are instantly reflected on all connected clients. Players can reset the game when someone wins or there's a draw.
 
-**Technologies Used**
-Frontend: React
+**Technologies Used**  
+
+Frontend: React  
+
 Backend & Real Time communication: Node.js, Express, Socket.IO
 
-**Customization**
-Feel free to modify the server-side logic in server.js to add more features like player tracking, game history or scoring.
-Add functionality for multiple players using room-based game sessions
+**Customization**  
+
+Feel free to modify the server-side logic in server.js to add more features like player tracking, game history, scoring or functionality for multiple players using room-based game sessions
 
