@@ -1,4 +1,5 @@
-**Features**
+**Features**  
+
 Real-time 2 player gameplay using socket.io
 simple React-based frontend for the TicTacToe game
 Node.js backend with Socket.io for synchronizing game states
@@ -12,7 +13,7 @@ npm (comes with node.js)
 
 **Installation**
 1. Clone the repository:
-  git clone https://github.com/SimisolaAgboola/tictactoe-multiplayer.git
+  git clone (https://github.com/SimisolaAgboola/TicTacToe.git)
 cd tictactoe-multiplayer
 2. Install server dependencies: 
   cd server
@@ -35,12 +36,6 @@ The React app will open in your default browser on http://localhost:3000
 **How It Works**.
 When more than 1 player joins the game, the game state (whose turn it is and the current board) is broadcast and synchronized across all clients in that game session.
 Players take turns by clicking on cells, and their moves are instantly reflected on all connected clients. Players can reset the game when someone wins or there's a draw.
-
-**Example Gameplay**
-The game starts with Player 1 as 'X' and Player 2 as 'O'.
-Players take turns by clicking on the board's cells.
-The first player to align three marks (horizontally, vertically, or diagonally) wins.
-If all cells are filled without a winner, the game declares a draw.
 
 **Technologies Used**
 Frontend: React
