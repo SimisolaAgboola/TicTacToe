@@ -10,8 +10,8 @@ Node.js backend with Socket.io for synchronizing game states
 
 Before running this application, make sure you have the following installed:  
 
--Node.js (v14 or higher)
--npm (comes with node.js)
+* Node.js (v14 or higher)
+* npm (comes with node.js)
 
 **Installation**
 1. Clone the repository:
