@@ -11,24 +11,44 @@ let gameState = {
   winner: null,
 };
 
+const players = {}; // Maps socket IDs to 'X' or 'O'
+
 io.on('connection', (socket) => {
   console.log('A user connected:', socket.id);
 
-  // Send initial game state to newly connected player
-  socket.emit('gameState', gameState);
+  const playerCount = Object.keys(players).length;
+  if (playerCount === 0) {
+    players[socket.id] = 'X';
+  } else if (playerCount === 1) {
+    players[socket.id] = 'O';
+  } else {
+    socket.emit('error', 'Game is full!');
+    socket.disconnect();
+    return;
+  }
 
-  // Handle move from a player
+  const playerSymbol = players[socket.id];
+  console.log(`Player ${playerSymbol} connected: ${socket.id}`);
+
+  socket.emit('playerSymbol', playerSymbol); // Send player's symbol to the client
+  socket.emit('gameState', gameState); // Send initial game state to the client
+
   socket.on('makeMove', (index) => {
-    if (gameState.board[index] === null && !gameState.winner) {
-      gameState.board[index] = gameState.currentPlayer;
-      gameState.currentPlayer = gameState.currentPlayer === 'X' ? 'O' : 'X';
+    if (
+      gameState.board[index] === null &&
+      !gameState.winner &&
+      gameState.currentPlayer === playerSymbol
+    ) {
+      gameState.board[index] = playerSymbol;
+      gameState.currentPlayer = playerSymbol === 'X' ? 'O' : 'X';
       gameState.winner = checkWinner(gameState.board);
-      
-      io.emit('gameState', gameState);
+
+      io.emit('gameState', gameState); // Broadcast updated game state
+    } else if (gameState.currentPlayer !== playerSymbol) {
+      socket.emit('error', 'It’s not your turn!');
     }
   });
 
-  // Reset game
   socket.on('resetGame', () => {
     gameState = {
       board: Array(9).fill(null),
@@ -39,7 +59,8 @@ io.on('connection', (socket) => {
   });
 
   socket.on('disconnect', () => {
-    console.log('User disconnected:', socket.id);
+    console.log(`Player ${players[socket.id]} disconnected: ${socket.id}`);
+    delete players[socket.id];
   });
 });
 
